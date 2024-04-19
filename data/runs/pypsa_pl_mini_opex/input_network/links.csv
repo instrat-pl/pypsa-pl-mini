@@ -1,0 +1,21 @@
+name,bus0,bus1,area,carrier,technology,qualifier,aggregation,p_nom,p_nom_min,p_nom_max,efficiency,variable_cost,marginal_cost,fixed_cost,capital_cost,p_min_pu,p_max_pu,p_set,build_year,lifetime
+PL battery large charger 2023,PL battery large electricity,PL electricity,PL,battery large charger,battery large charger,,battery large,140.0,140.0,140.0,1.1111111111111112,-0.0,-0.0,0.0,0.0,-1.0,-0.0,,2023,1.0
+PL battery large power 2023,PL electricity,PL battery large electricity,PL,battery large power,battery large power,,battery large,150.0,150.0,150.0,1.0,-13.0,-13.0,3400.0,3400.0,-1.0,-0.0,,2023,1.0
+PL biogas CHP industrial 2023,PL electricity,PL biogas,PL,biogas CHP,biogas CHP,industrial,biomass and biogas CHP,70.0,70.0,70.0,2.4390243902439024,-47.0,-47.0,62000.0,62000.0,-1.0,-0.0,0.0,2023,1.0
+PL biogas CHP public 2023,PL electricity,PL biogas,PL,biogas CHP,biogas CHP,public,biomass and biogas CHP,210.0,210.0,210.0,2.4390243902439024,-47.0,-47.0,62000.0,62000.0,-1.0,-0.0,0.0,2023,1.0
+PL biogas production industrial 2023,PL biogas,PL biogas substrate,PL,biogas production,biogas production,industrial,biomass and biogas supply,180.0,180.0,180.0,1.1111111111111112,-2.1,-2.1,350000.0,350000.0,-1.0,-0.0,0.0,2023,1.0
+PL biogas production public 2023,PL biogas,PL biogas substrate,PL,biogas production,biogas production,public,biomass and biogas supply,520.0,520.0,520.0,1.1111111111111112,-2.1,-2.1,350000.0,350000.0,-1.0,-0.0,,2023,1.0
+PL biomass wood CHP industrial 2023,PL electricity,PL biomass wood,PL,biomass wood CHP,biomass wood CHP,industrial,biomass and biogas CHP,200.0,200.0,200.0,3.846153846153846,-28.0,-28.0,940000.0,940000.0,-1.0,-0.0,0.0,2023,1.0
+PL biomass wood CHP public 2023,PL electricity,PL biomass wood,PL,biomass wood CHP,biomass wood CHP,public,biomass and biogas CHP,260.0,260.0,260.0,3.846153846153846,-28.0,-28.0,940000.0,940000.0,-1.0,-0.0,0.0,2023,1.0
+PL biomass wood power public 2023,PL electricity,PL biomass wood,PL,biomass wood power,biomass wood power,public,biomass power,400.0,400.0,400.0,3.125,-28.0,-28.0,600000.0,600000.0,-1.0,-0.25,,2023,1.0
+PL hard coal CHP industrial 2023,PL electricity,PL hard coal,PL,hard coal CHP,hard coal CHP,industrial,hard coal power,1030.0,1030.0,1030.0,3.7037037037037033,-20.0,-20.0,210000.0,210000.0,-1.0,-0.0,0.0,2023,1.0
+PL hard coal CHP public 2023,PL electricity,PL hard coal,PL,hard coal CHP,hard coal CHP,public,hard coal power,4120.0,4120.0,4120.0,3.7037037037037033,-20.0,-20.0,210000.0,210000.0,-1.0,-0.0,0.0,2023,1.0
+PL hard coal power SC public 2023,PL electricity,PL hard coal,PL,hard coal power,hard coal power SC,public,hard coal power,4050.0,4050.0,4050.0,2.3255813953488373,-20.0,-20.0,210000.0,210000.0,-1.0,-0.25,,2023,1.0
+PL hard coal power old public 2023,PL electricity,PL hard coal,PL,hard coal power,hard coal power old,public,hard coal power,11300.0,11300.0,11300.0,3.0303030303030303,-20.0,-20.0,210000.0,210000.0,-1.0,-0.25,,2023,1.0
+PL hydro PSH power 2023,PL electricity,PL hydro PSH electricity,PL,hydro PSH power,hydro PSH power,,hydro PSH,1790.0,1790.0,1790.0,1.0,-10.0,-10.0,51000.0,51000.0,-1.0,-0.0,,2023,1.0
+PL hydro PSH pump 2023,PL hydro PSH electricity,PL electricity,PL,hydro PSH pump,hydro PSH pump,,hydro PSH,1130.0,1130.0,1130.0,1.4285714285714286,-0.0,-0.0,0.0,0.0,-1.0,-0.0,,2023,1.0
+PL lignite power SC public 2023,PL electricity,PL lignite,PL,lignite power,lignite power SC,public,lignite power,1710.0,1710.0,1710.0,2.5,-20.0,-20.0,210000.0,210000.0,-1.0,-0.25,,2023,1.0
+PL lignite power old public 2023,PL electricity,PL lignite,PL,lignite power,lignite power old,public,lignite power,5930.0,5930.0,5930.0,3.0303030303030303,-20.0,-20.0,210000.0,210000.0,-1.0,-0.25,,2023,1.0
+PL natural gas CHP old industrial 2023,PL electricity,PL natural gas,PL,natural gas CHP,natural gas CHP old,industrial,natural gas CHP,1510.0,1510.0,1510.0,2.0833333333333335,-28.0,-28.0,190000.0,190000.0,-1.0,-0.0,0.0,2023,1.0
+PL natural gas CHP old public 2023,PL electricity,PL natural gas,PL,natural gas CHP,natural gas CHP old,public,natural gas CHP,2440.0,2440.0,2440.0,2.0833333333333335,-28.0,-28.0,190000.0,190000.0,-1.0,-0.0,0.0,2023,1.0
+PL other CHP industrial 2023,PL electricity,PL other fuel,PL,other CHP,other CHP,industrial,other CHP,550.0,550.0,550.0,2.941176470588235,-97.0,-97.0,860000.0,860000.0,-1.0,-0.0,0.0,2023,1.0

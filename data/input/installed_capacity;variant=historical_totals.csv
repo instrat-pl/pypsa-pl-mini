@@ -1,0 +1,149 @@
+name,area,technology,qualifier,build_year,retire_year,cumulative,nom
+PL battery large power 2021,PL,battery large power,,2021,2021,TRUE,50.0
+PL battery large power 2022,PL,battery large power,,2022,2022,TRUE,100.0
+PL battery large power 2023,PL,battery large power,,2023,2023,TRUE,150.0
+PL battery large charger 2021,PL,battery large charger,,2021,2021,TRUE,50.0
+PL battery large charger 2022,PL,battery large charger,,2022,2022,TRUE,90.0
+PL battery large charger 2023,PL,battery large charger,,2023,2023,TRUE,140.0
+PL battery large storage 2021,PL,battery large storage,,2021,2021,TRUE,200.0
+PL battery large storage 2022,PL,battery large storage,,2022,2022,TRUE,400.0
+PL battery large storage 2023,PL,battery large storage,,2023,2023,TRUE,600.0
+PL biogas CHP industrial 2020,PL,biogas CHP,industrial,2020,2020,TRUE,60.0
+PL biogas CHP industrial 2021,PL,biogas CHP,industrial,2021,2021,TRUE,60.0
+PL biogas CHP industrial 2022,PL,biogas CHP,industrial,2022,2022,TRUE,70.0
+PL biogas CHP industrial 2023,PL,biogas CHP,industrial,2023,2023,TRUE,70.0
+PL biogas CHP public 2020,PL,biogas CHP,public,2020,2020,TRUE,180.0
+PL biogas CHP public 2021,PL,biogas CHP,public,2021,2021,TRUE,190.0
+PL biogas CHP public 2022,PL,biogas CHP,public,2022,2022,TRUE,200.0
+PL biogas CHP public 2023,PL,biogas CHP,public,2023,2023,TRUE,210.0
+PL biogas production industrial 2020,PL,biogas production,industrial,2020,2020,TRUE,150.0
+PL biogas production industrial 2021,PL,biogas production,industrial,2021,2021,TRUE,150.0
+PL biogas production industrial 2022,PL,biogas production,industrial,2022,2022,TRUE,180.0
+PL biogas production industrial 2023,PL,biogas production,industrial,2023,2023,TRUE,180.0
+PL biogas production public 2020,PL,biogas production,public,2020,2020,TRUE,440.0
+PL biogas production public 2021,PL,biogas production,public,2021,2021,TRUE,470.0
+PL biogas production public 2022,PL,biogas production,public,2022,2022,TRUE,490.0
+PL biogas production public 2023,PL,biogas production,public,2023,2023,TRUE,520.0
+PL biogas substrate supply 2020,PL,biogas substrate supply,,2020,2020,TRUE,inf
+PL biogas substrate supply 2021,PL,biogas substrate supply,,2021,2021,TRUE,inf
+PL biogas substrate supply 2022,PL,biogas substrate supply,,2022,2022,TRUE,inf
+PL biogas substrate supply 2023,PL,biogas substrate supply,,2023,2023,TRUE,inf
+PL biomass wood CHP industrial 2020,PL,biomass wood CHP,industrial,2020,2020,TRUE,190.0
+PL biomass wood CHP industrial 2021,PL,biomass wood CHP,industrial,2021,2021,TRUE,190.0
+PL biomass wood CHP industrial 2022,PL,biomass wood CHP,industrial,2022,2022,TRUE,200.0
+PL biomass wood CHP industrial 2023,PL,biomass wood CHP,industrial,2023,2023,TRUE,200.0
+PL biomass wood CHP public 2020,PL,biomass wood CHP,public,2020,2020,TRUE,260.0
+PL biomass wood CHP public 2021,PL,biomass wood CHP,public,2021,2021,TRUE,270.0
+PL biomass wood CHP public 2022,PL,biomass wood CHP,public,2022,2022,TRUE,260.0
+PL biomass wood CHP public 2023,PL,biomass wood CHP,public,2023,2023,TRUE,260.0
+PL biomass wood power public 2020,PL,biomass wood power,public,2020,2020,TRUE,430.0
+PL biomass wood power public 2021,PL,biomass wood power,public,2021,2021,TRUE,430.0
+PL biomass wood power public 2022,PL,biomass wood power,public,2022,2022,TRUE,430.0
+PL biomass wood power public 2023,PL,biomass wood power,public,2023,2023,TRUE,400.0
+PL biomass wood supply 2020,PL,biomass wood supply,,2020,2020,TRUE,inf
+PL biomass wood supply 2021,PL,biomass wood supply,,2021,2021,TRUE,inf
+PL biomass wood supply 2022,PL,biomass wood supply,,2022,2022,TRUE,inf
+PL biomass wood supply 2023,PL,biomass wood supply,,2023,2023,TRUE,inf
+PL electricity export AC 2020,PL,electricity export AC,,2020,2020,TRUE,5840.0
+PL electricity export AC 2021,PL,electricity export AC,,2021,2021,TRUE,5840.0
+PL electricity export AC 2022,PL,electricity export AC,,2022,2022,TRUE,5840.0
+PL electricity export AC 2023,PL,electricity export AC,,2023,2023,TRUE,5840.0
+PL electricity export DC 2020,PL,electricity export DC,,2020,2020,TRUE,1100.0
+PL electricity export DC 2021,PL,electricity export DC,,2021,2021,TRUE,1100.0
+PL electricity export DC 2022,PL,electricity export DC,,2022,2022,TRUE,1100.0
+PL electricity export DC 2023,PL,electricity export DC,,2023,2023,TRUE,1100.0
+PL electricity final use 2020,PL,electricity final use,,2020,2020,TRUE,inf
+PL electricity final use 2021,PL,electricity final use,,2021,2021,TRUE,inf
+PL electricity final use 2022,PL,electricity final use,,2022,2022,TRUE,inf
+PL electricity final use 2023,PL,electricity final use,,2023,2023,TRUE,inf
+PL electricity import AC 2020,PL,electricity import AC,,2020,2020,TRUE,4740.0
+PL electricity import AC 2021,PL,electricity import AC,,2021,2021,TRUE,4740.0
+PL electricity import AC 2022,PL,electricity import AC,,2022,2022,TRUE,4740.0
+PL electricity import AC 2023,PL,electricity import AC,,2023,2023,TRUE,4740.0
+PL electricity import DC 2020,PL,electricity import DC,,2020,2020,TRUE,1100.0
+PL electricity import DC 2021,PL,electricity import DC,,2021,2021,TRUE,1100.0
+PL electricity import DC 2022,PL,electricity import DC,,2022,2022,TRUE,1100.0
+PL electricity import DC 2023,PL,electricity import DC,,2023,2023,TRUE,1100.0
+PL hard coal CHP industrial 2020,PL,hard coal CHP,industrial,2020,2020,TRUE,950.0
+PL hard coal CHP industrial 2021,PL,hard coal CHP,industrial,2021,2021,TRUE,960.0
+PL hard coal CHP industrial 2022,PL,hard coal CHP,industrial,2022,2022,TRUE,1010.0
+PL hard coal CHP industrial 2023,PL,hard coal CHP,industrial,2023,2023,TRUE,1030.0
+PL hard coal CHP public 2020,PL,hard coal CHP,public,2020,2020,TRUE,4450.0
+PL hard coal CHP public 2021,PL,hard coal CHP,public,2021,2021,TRUE,4680.0
+PL hard coal CHP public 2022,PL,hard coal CHP,public,2022,2022,TRUE,4120.0
+PL hard coal CHP public 2023,PL,hard coal CHP,public,2023,2023,TRUE,4120.0
+PL hard coal power old public 2020,PL,hard coal power old,public,2020,2020,TRUE,13020.0
+PL hard coal power old public 2021,PL,hard coal power old,public,2021,2021,TRUE,11940.0
+PL hard coal power old public 2022,PL,hard coal power old,public,2022,2022,TRUE,11300.0
+PL hard coal power old public 2023,PL,hard coal power old,public,2023,2023,TRUE,11300.0
+PL hard coal power SC public 2020,PL,hard coal power SC,public,2020,2020,TRUE,4050.0
+PL hard coal power SC public 2021,PL,hard coal power SC,public,2021,2021,TRUE,4050.0
+PL hard coal power SC public 2022,PL,hard coal power SC,public,2022,2022,TRUE,4050.0
+PL hard coal power SC public 2023,PL,hard coal power SC,public,2023,2023,TRUE,4050.0
+PL hard coal supply 2020,PL,hard coal supply,,2020,2020,TRUE,inf
+PL hard coal supply 2021,PL,hard coal supply,,2021,2021,TRUE,inf
+PL hard coal supply 2022,PL,hard coal supply,,2022,2022,TRUE,inf
+PL hard coal supply 2023,PL,hard coal supply,,2023,2023,TRUE,inf
+PL hydro PSH power 2020,PL,hydro PSH power,,2020,2020,TRUE,1790.0
+PL hydro PSH power 2021,PL,hydro PSH power,,2021,2021,TRUE,1790.0
+PL hydro PSH power 2022,PL,hydro PSH power,,2022,2022,TRUE,1790.0
+PL hydro PSH power 2023,PL,hydro PSH power,,2023,2023,TRUE,1790.0
+PL hydro PSH pump 2020,PL,hydro PSH pump,,2020,2020,TRUE,1130.0
+PL hydro PSH pump 2021,PL,hydro PSH pump,,2021,2021,TRUE,1130.0
+PL hydro PSH pump 2022,PL,hydro PSH pump,,2022,2022,TRUE,1130.0
+PL hydro PSH pump 2023,PL,hydro PSH pump,,2023,2023,TRUE,1130.0
+PL hydro PSH storage 2020,PL,hydro PSH storage,,2020,2020,TRUE,8470.0
+PL hydro PSH storage 2021,PL,hydro PSH storage,,2021,2021,TRUE,8470.0
+PL hydro PSH storage 2022,PL,hydro PSH storage,,2022,2022,TRUE,8470.0
+PL hydro PSH storage 2023,PL,hydro PSH storage,,2023,2023,TRUE,8470.0
+PL hydro ROR 2020,PL,hydro ROR,,2020,2020,TRUE,590.0
+PL hydro ROR 2021,PL,hydro ROR,,2021,2021,TRUE,600.0
+PL hydro ROR 2022,PL,hydro ROR,,2022,2022,TRUE,600.0
+PL hydro ROR 2023,PL,hydro ROR,,2023,2023,TRUE,600.0
+PL lignite power old public 2020,PL,lignite power old,public,2020,2020,TRUE,6480.0
+PL lignite power old public 2021,PL,lignite power old,public,2021,2021,TRUE,6110.0
+PL lignite power old public 2022,PL,lignite power old,public,2022,2022,TRUE,5930.0
+PL lignite power old public 2023,PL,lignite power old,public,2023,2023,TRUE,5930.0
+PL lignite power SC public 2020,PL,lignite power SC,public,2020,2020,TRUE,1240.0
+PL lignite power SC public 2021,PL,lignite power SC,public,2021,2021,TRUE,1710.0
+PL lignite power SC public 2022,PL,lignite power SC,public,2022,2022,TRUE,1710.0
+PL lignite power SC public 2023,PL,lignite power SC,public,2023,2023,TRUE,1710.0
+PL lignite supply 2020,PL,lignite supply,,2020,2020,TRUE,inf
+PL lignite supply 2021,PL,lignite supply,,2021,2021,TRUE,inf
+PL lignite supply 2022,PL,lignite supply,,2022,2022,TRUE,inf
+PL lignite supply 2023,PL,lignite supply,,2023,2023,TRUE,inf
+PL natural gas CHP old industrial 2020,PL,natural gas CHP old,industrial,2020,2020,TRUE,1430.0
+PL natural gas CHP old industrial 2021,PL,natural gas CHP old,industrial,2021,2021,TRUE,1440.0
+PL natural gas CHP old industrial 2022,PL,natural gas CHP old,industrial,2022,2022,TRUE,1460.0
+PL natural gas CHP old industrial 2023,PL,natural gas CHP old,industrial,2023,2023,TRUE,1510.0
+PL natural gas CHP old public 2020,PL,natural gas CHP old,public,2020,2020,TRUE,1720.0
+PL natural gas CHP old public 2021,PL,natural gas CHP old,public,2021,2021,TRUE,1880.0
+PL natural gas CHP old public 2022,PL,natural gas CHP old,public,2022,2022,TRUE,2440.0
+PL natural gas CHP old public 2023,PL,natural gas CHP old,public,2023,2023,TRUE,2440.0
+PL natural gas supply 2020,PL,natural gas supply,,2020,2020,TRUE,inf
+PL natural gas supply 2021,PL,natural gas supply,,2021,2021,TRUE,inf
+PL natural gas supply 2022,PL,natural gas supply,,2022,2022,TRUE,inf
+PL natural gas supply 2023,PL,natural gas supply,,2023,2023,TRUE,inf
+PL other fuel supply 2020,PL,other fuel supply,,2020,2020,TRUE,inf
+PL other fuel supply 2021,PL,other fuel supply,,2021,2021,TRUE,inf
+PL other fuel supply 2022,PL,other fuel supply,,2022,2022,TRUE,inf
+PL other fuel supply 2023,PL,other fuel supply,,2023,2023,TRUE,inf
+PL other CHP industrial 2020,PL,other CHP,industrial,2020,2020,TRUE,520.0
+PL other CHP industrial 2021,PL,other CHP,industrial,2021,2021,TRUE,520.0
+PL other CHP industrial 2022,PL,other CHP,industrial,2022,2022,TRUE,600.0
+PL other CHP industrial 2023,PL,other CHP,industrial,2023,2023,TRUE,550.0
+PL solar PV ground 2020,PL,solar PV ground,,2020,2020,TRUE,1230.0
+PL solar PV ground 2021,PL,solar PV ground,,2021,2021,TRUE,1810.0
+PL solar PV ground 2022,PL,solar PV ground,,2022,2022,TRUE,3390.0
+PL solar PV ground 2023,PL,solar PV ground,,2023,2023,TRUE,6380.0
+PL solar PV roof 2020,PL,solar PV roof,,2020,2020,TRUE,2730.0
+PL solar PV roof 2021,PL,solar PV roof,,2021,2021,TRUE,5870.0
+PL solar PV roof 2022,PL,solar PV roof,,2022,2022,TRUE,8790.0
+PL solar PV roof 2023,PL,solar PV roof,,2023,2023,TRUE,10670.0
+PL wind onshore 2021,PL,wind onshore,,2021,2021,TRUE,810.0
+PL wind onshore 2022,PL,wind onshore,,2022,2022,TRUE,1870.0
+PL wind onshore 2023,PL,wind onshore,,2023,2023,TRUE,3050.0
+PL wind onshore old 2020,PL,wind onshore old,,2020,2020,TRUE,6380.0
+PL wind onshore old 2021,PL,wind onshore old,,2021,2021,TRUE,6380.0
+PL wind onshore old 2022,PL,wind onshore old,,2022,2022,TRUE,6380.0
+PL wind onshore old 2023,PL,wind onshore old,,2023,2023,TRUE,6380.0

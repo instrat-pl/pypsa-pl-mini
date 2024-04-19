@@ -1,0 +1,4 @@
+name,bus,area,carrier,technology,aggregation,e_nom,e_nom_extendable,e_nom_min,e_nom_max,investment_cost,annual_investment_cost,capital_cost,build_year,lifetime,e_cyclic,e_nom_opt
+PL battery large storage 2023,PL battery large electricity,PL,battery large storage,battery large storage,battery large,600.0,True,600.0,600.0,0.0,0.0,0.0,2023,1.0,True,600.0
+PL battery large storage new,PL battery large electricity,PL,battery large storage,battery large storage,battery large,0.0,True,0.0,inf,1500000.0,100823.56139528863,100823.56139528863,2023,20.0,True,0.0
+PL hydro PSH storage 2023,PL hydro PSH electricity,PL,hydro PSH storage,hydro PSH storage,hydro PSH,8470.0,False,8470.0,8470.0,0.0,0.0,0.0,2023,1.0,True,8470.0

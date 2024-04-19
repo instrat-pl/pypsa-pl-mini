@@ -1,0 +1,42 @@
+technology,carrier,aggregation,bus_carrier,input_carrier,output_carrier,output2_carrier,component,color,order
+electricity final use,electricity final use,electricity final use,,electricity,,,Generator,#b6b6b7,1
+hard coal supply,hard coal supply,hard coal supply,,,hard coal,,Generator,#b5c6cf,10
+hard coal power old,hard coal power,hard coal power,,hard coal,electricity,,Link,#b5c6cf,11
+hard coal power SC,hard coal power,hard coal power,,hard coal,electricity,,Link,#b5c6cf,12
+hard coal CHP,hard coal CHP,hard coal power,,hard coal,electricity,,Link,#b5c6cf,13
+lignite supply,lignite supply,lignite supply,,,lignite,,Generator,#72a0b7,20
+lignite power old,lignite power,lignite power,,lignite,electricity,,Link,#72a0b7,21
+lignite power SC,lignite power,lignite power,,lignite,electricity,,Link,#72a0b7,22
+natural gas supply,natural gas supply,natural gas supply,,,natural gas,,Generator,#4b7689,30
+natural gas power CCGT,natural gas power,natural gas power,,natural gas,electricity,,Link,#4b7689,31
+natural gas power peaker,natural gas power,natural gas power,,natural gas,electricity,,Link,#4b7689,32
+natural gas CHP old,natural gas CHP,natural gas CHP,,natural gas,electricity,,Link,#4b7689,33
+natural gas CHP CCGT,natural gas CHP,natural gas CHP,,natural gas,electricity,,Link,#4b7689,34
+other fuel supply,other fuel supply,other fuel supply,,,other fuel,,Generator,#263b46,40
+other CHP,other CHP,other CHP,,other fuel,electricity,,Link,#263b46,41
+nuclear power large,nuclear power,nuclear power,,,electricity,,Generator,#d6c0bd,51
+biomass wood supply,biomass wood supply,biomass and biogas supply,,,biomass wood,,Generator,#ab9d99,60
+biomass wood power,biomass wood power,biomass power,,biomass wood,electricity,,Link,#ab9d99,61
+biomass wood CHP,biomass wood CHP,biomass and biogas CHP,,biomass wood,electricity,,Link,#ab9d99,62
+biomass agriculture supply,biomass agriculture supply,biomass and biogas supply,,,biomass agriculture,,Generator,#ab9d99,70
+biomass agriculture CHP,biomass agriculture CHP,biomass and biogas CHP,,biomass agriculture,electricity,,Link,#ab9d99,71
+biogas substrate supply,biogas substrate supply,biomass and biogas supply,,,biogas substrate,,Generator,#816d66,80
+biogas production,biogas production,biomass and biogas supply,,biogas substrate,biogas,,Link,#816d66,81
+biogas CHP,biogas CHP,biomass and biogas CHP,,biogas,electricity,,Link,#816d66,82
+wind onshore old,wind onshore,wind onshore,,,electricity,,Generator,#69f0ae,100
+wind onshore,wind onshore,wind onshore,,,electricity,,Generator,#69f0ae,101
+wind offshore,wind offshore,wind offshore,,,electricity,,Generator,#b9f6ca,102
+solar PV ground,solar PV ground,solar PV ground,,,electricity,,Generator,#f3b3fd,111
+solar PV roof,solar PV roof,solar PV roof,,,electricity,,Generator,#e040fb,112
+hydro ROR,hydro ROR,hydro ROR,,,electricity,,Generator,#2979ff,121
+hydro PSH storage,hydro PSH storage,hydro PSH,hydro PSH electricity,,,,Store,#82b1ff,130
+hydro PSH power,hydro PSH power,hydro PSH,,hydro PSH electricity,electricity,,Link,#82b1ff,131
+hydro PSH pump,hydro PSH pump,hydro PSH,,electricity,hydro PSH electricity,,Link,#82b1ff,132
+battery large storage,battery large storage,battery large,battery large electricity,,,,Store,#458aff,140
+battery large power,battery large power,battery large,,battery large electricity,electricity,,Link,#458aff,141
+battery large charger,battery large charger,battery large,,electricity,battery large electricity,,Link,#458aff,142
+electricity import AC,electricity import,electricity import or export,,,electricity,,Generator,#767778,181
+electricity import DC,electricity import,electricity import or export,,,electricity,,Generator,#767778,182
+electricity export AC,electricity export,electricity import or export,,electricity,,,Generator,#767778,183
+electricity export DC,electricity export,electricity import or export,,electricity,,,Generator,#767778,184
+DSR reduction,DSR reduction,DSR,,,electricity,,Generator,#1b1c1e,191

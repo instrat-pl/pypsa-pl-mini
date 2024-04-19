@@ -1,0 +1,33 @@
+area,technology,qualifier,year,parameter,value
+PL,biogas CHP,industrial,2022,p_set_pu,0.51
+PL,biogas CHP,industrial,2023,p_set_pu,0.48
+PL,biogas CHP,public,2022,p_set_pu_annual,0.52
+PL,biogas CHP,public,2023,p_set_pu_annual,0.55
+PL,biogas production,industrial,2022,p_set_pu,0.51
+PL,biogas production,industrial,2023,p_set_pu,0.48
+PL,biomass wood CHP,industrial,2022,p_set_pu,0.68
+PL,biomass wood CHP,industrial,2023,p_set_pu,0.65
+PL,biomass wood CHP,public,2022,p_set_pu_annual,0.45
+PL,biomass wood CHP,public,2023,p_set_pu_annual,0.53
+PL,biomass wood power,public,2022,p_min_pu,0.25
+PL,biomass wood power,public,2023,p_min_pu,0.25
+PL,hard coal CHP,industrial,2022,p_set_pu,0.34
+PL,hard coal CHP,industrial,2023,p_set_pu,0.29
+PL,hard coal CHP,public,2022,p_set_pu_annual,0.4
+PL,hard coal CHP,public,2023,p_set_pu_annual,0.36
+PL,hard coal power old,public,2022,p_min_pu,0.25
+PL,hard coal power old,public,2023,p_min_pu,0.25
+PL,hard coal power SC,public,2022,p_min_pu,0.25
+PL,hard coal power SC,public,2023,p_min_pu,0.25
+PL,hydro ROR,,2022,p_set_pu,0.38
+PL,hydro ROR,,2023,p_set_pu,0.46
+PL,lignite power old,public,2022,p_min_pu,0.25
+PL,lignite power old,public,2023,p_min_pu,0.25
+PL,lignite power SC,public,2022,p_min_pu,0.25
+PL,lignite power SC,public,2023,p_min_pu,0.25
+PL,natural gas CHP old,industrial,2022,p_set_pu,0.43
+PL,natural gas CHP old,industrial,2023,p_set_pu,0.52
+PL,natural gas CHP old,public,2022,p_set_pu_annual,0.27
+PL,natural gas CHP old,public,2023,p_set_pu_annual,0.41
+PL,other CHP,industrial,2022,p_set_pu,0.48
+PL,other CHP,industrial,2023,p_set_pu,0.5

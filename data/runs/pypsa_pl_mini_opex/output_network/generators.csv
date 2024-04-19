@@ -1,0 +1,13 @@
+name,bus,area,carrier,technology,qualifier,aggregation,p_nom,p_nom_min,p_nom_max,sign,variable_cost,co2_cost,marginal_cost,fixed_cost,capital_cost,p_set,build_year,lifetime,p_nom_opt
+PL biogas substrate supply 2023,PL biogas substrate,PL,biogas substrate supply,biogas substrate supply,,biomass and biogas supply,100000.0,100000.0,100000.0,1.0,180.0,0.0,180.0,0.0,0.0,,2023,1.0,100000.0
+PL biomass wood supply 2023,PL biomass wood,PL,biomass wood supply,biomass wood supply,,biomass and biogas supply,100000.0,100000.0,100000.0,1.0,120.0,0.0,120.0,0.0,0.0,,2023,1.0,100000.0
+PL electricity final use 2023,PL electricity,PL,electricity final use,electricity final use,,electricity final use,100000.0,100000.0,100000.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,2023,1.0,100000.0
+PL hard coal supply 2023,PL hard coal,PL,hard coal supply,hard coal supply,,hard coal supply,100000.0,100000.0,100000.0,1.0,120.0,129.20000000000002,249.20000000000002,0.0,0.0,,2023,1.0,100000.0
+PL hydro ROR 2023,PL electricity,PL,hydro ROR,hydro ROR,,hydro ROR,600.0,600.0,600.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2023,1.0,600.0
+PL lignite supply 2023,PL lignite,PL,lignite supply,lignite supply,,lignite supply,100000.0,100000.0,100000.0,1.0,34.0,152.0,186.0,0.0,0.0,,2023,1.0,100000.0
+PL natural gas supply 2023,PL natural gas,PL,natural gas supply,natural gas supply,,natural gas supply,100000.0,100000.0,100000.0,1.0,210.0,76.0,286.0,0.0,0.0,,2023,1.0,100000.0
+PL other fuel supply 2023,PL other fuel,PL,other fuel supply,other fuel supply,,other fuel supply,100000.0,100000.0,100000.0,1.0,90.0,121.60000000000001,211.60000000000002,0.0,0.0,,2023,1.0,100000.0
+PL solar PV ground 2023,PL electricity,PL,solar PV ground,solar PV ground,,solar PV ground,6380.0,6380.0,6380.0,1.0,0.0,0.0,0.0,54000.0,54000.0,,2023,1.0,6380.0
+PL solar PV roof 2023,PL electricity,PL,solar PV roof,solar PV roof,prosumer,solar PV roof,10670.0,10670.0,10670.0,1.0,0.0,0.0,0.0,67000.0,67000.0,,2023,1.0,10670.0
+PL wind onshore 2023,PL electricity,PL,wind onshore,wind onshore,,wind onshore,3050.0,3050.0,3050.0,1.0,13.0,0.0,13.0,98000.0,98000.0,,2023,1.0,3050.0
+PL wind onshore old 2023,PL electricity,PL,wind onshore,wind onshore old,,wind onshore,6380.0,6380.0,6380.0,1.0,17.0,0.0,17.0,160000.0,160000.0,,2023,1.0,6380.0

@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "pypsa-pl-mini"
+version = "0.1.0"
+description = "PyPSA-PL-mini: simple optimisation model of the Polish energy system model intended for testing and educational purposes"
+authors = ["Patryk Kubiczek <patryk.kubiczek@instrat.pl>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "src/pypsa_pl_mini"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pypsa = "^0.27.0"
+pandas = "^2.2.0"
+numpy = "^1.26.4"
+gspread = "5.12.4"
+pyarrow = "^15.0.0"
+highspy = "^1.5.3"
+matplotlib = "^3.8.3"
+xarray = "^2024.2.0"
+linopy = "^0.3.5"
+ipywidgets = "^8.1.2"
+notebook = "^7.1.2"
+
+[tool.poetry.group.dev.dependencies]
+icecream = "^2.1.3"
+requests = "^2.31.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
