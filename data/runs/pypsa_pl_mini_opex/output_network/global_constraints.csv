@@ -1,0 +1,9 @@
+name,type,carrier_attribute,constant,mu
+PL electricity export flow 2023,operational_limit,electricity export,11400000.0,403.00003138860853
+PL electricity import flow 2023,operational_limit,electricity import,15100000.0,-403.0000384593695
+PL hard coal power flow 2023,operational_limit,hard coal power,44300000.0,196.5348468454411
+PL hydro PSH power flow 2023,operational_limit,hydro PSH power,1300000.0,182.7142564668912
+PL lignite power flow 2023,operational_limit,lignite power,30100000.0,180.63631050125306
+PL solar PV ground flow 2023,operational_limit,solar PV ground,4600000.0,-403.0000307480645
+PL solar PV roof flow 2023,operational_limit,solar PV roof,6800000.0,-403.0000266397416
+PL wind onshore flow 2023,operational_limit,wind onshore,23200000.0,-385.9999747727504

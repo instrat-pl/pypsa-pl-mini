@@ -262,7 +262,15 @@ def calculate_flows(network, bus_carrier="electricity", annual=True):
         network.buses["area"], how="left", left_on="bus", right_index=True
     ).drop(columns="bus")
     df["year"] = year
-    df = df.set_index(["year", "component", "area", "carrier"]).sort_index()
+
+    df = df.merge(
+        network.carriers[["aggregation"]],
+        left_on="carrier",
+        right_index=True,
+        how="left",
+    )
+
+    df = df.set_index(["year", "component", "area", "carrier", "aggregation"]).sort_index()
 
     # Provide annual value in TWh
     if annual:

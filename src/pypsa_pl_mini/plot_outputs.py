@@ -175,18 +175,19 @@ def plot_storage_capacity_additions(
 
 
 def plot_annual_generation(
-    network, bus_carrier="electricity", ylim=None, figsize=(5, 8)
+    network, bus_carrier="electricity", agg="carrier", ylim=None, figsize=(5, 8)
 ):
     df = calculate_flows(network, bus_carrier=bus_carrier)
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
+    df = df.groupby(["year", agg]).agg({"value": "sum"}).reset_index()
     df["value"] = df["value"].round(2)
 
-    df = df[~df["carrier"].str.contains("final use")]
+    df = df[~df[agg].str.contains("final use")]
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    carrier_order, carrier_colors = get_order_and_colors(network, agg=agg)
     fig = plot_bar(
         df,
         title=f"{bus_carrier.capitalize()} generation [TWh]",
+        cat_var=agg,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 5),

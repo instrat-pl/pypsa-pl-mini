@@ -1,7 +1,11 @@
 name,bus,area,carrier,technology,qualifier,aggregation,p_nom,p_nom_min,p_nom_max,sign,variable_cost,co2_cost,marginal_cost,fixed_cost,capital_cost,p_set,build_year,lifetime
 PL biogas substrate supply 2023,PL biogas substrate,PL,biogas substrate supply,biogas substrate supply,,biomass and biogas supply,100000.0,100000.0,100000.0,1.0,180.0,0.0,180.0,0.0,0.0,,2023,1.0
 PL biomass wood supply 2023,PL biomass wood,PL,biomass wood supply,biomass wood supply,,biomass and biogas supply,100000.0,100000.0,100000.0,1.0,120.0,0.0,120.0,0.0,0.0,,2023,1.0
+PL electricity export AC 2023,PL electricity,PL,electricity export,electricity export AC,,electricity import or export,5840.0,5840.0,5840.0,-1.0,0.0,0.0,0.0,0.0,0.0,,2023,1.0
+PL electricity export DC 2023,PL electricity,PL,electricity export,electricity export DC,,electricity import or export,1100.0,1100.0,1100.0,-1.0,0.0,0.0,0.0,0.0,0.0,,2023,1.0
 PL electricity final use 2023,PL electricity,PL,electricity final use,electricity final use,,electricity final use,100000.0,100000.0,100000.0,-1.0,0.0,0.0,0.0,0.0,0.0,0.0,2023,1.0
+PL electricity import AC 2023,PL electricity,PL,electricity import,electricity import AC,,electricity import or export,4740.0,4740.0,4740.0,1.0,0.0,0.0,0.0,0.0,0.0,,2023,1.0
+PL electricity import DC 2023,PL electricity,PL,electricity import,electricity import DC,,electricity import or export,1100.0,1100.0,1100.0,1.0,0.0,0.0,0.0,0.0,0.0,,2023,1.0
 PL hard coal supply 2023,PL hard coal,PL,hard coal supply,hard coal supply,,hard coal supply,100000.0,100000.0,100000.0,1.0,120.0,129.20000000000002,249.20000000000002,0.0,0.0,,2023,1.0
 PL hydro ROR 2023,PL electricity,PL,hydro ROR,hydro ROR,,hydro ROR,600.0,600.0,600.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,2023,1.0
 PL lignite supply 2023,PL lignite,PL,lignite supply,lignite supply,,lignite supply,100000.0,100000.0,100000.0,1.0,34.0,152.0,186.0,0.0,0.0,,2023,1.0
