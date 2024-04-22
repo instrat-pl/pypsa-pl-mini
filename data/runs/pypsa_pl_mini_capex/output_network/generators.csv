@@ -9,9 +9,9 @@ PL natural gas supply 2023,PL natural gas,PL,natural gas supply,natural gas supp
 PL nuclear power large new,PL electricity,PL,nuclear power,nuclear power large,,nuclear power,0.0,False,0.0,0.0,1.0,0.32,70.0,0.0,70.0,660000.0,33000000.0,1192387.6383554484,1852387.6383554484,0.4,,2023,60.0,0.0
 PL other fuel supply 2023,PL other fuel,PL,other fuel supply,other fuel supply,,other fuel supply,100000.0,False,100000.0,100000.0,1.0,1.0,90.0,121.60000000000001,211.60000000000002,0.0,0.0,0.0,0.0,0.0,,2023,1.0,100000.0
 PL solar PV ground 2023,PL electricity,PL,solar PV ground,solar PV ground,,solar PV ground,6380.063800000001,True,6380.0,6380.0,1.0,1.0,0.0,0.0,0.0,54000.0,0.0,0.0,54000.0,0.0,,2023,1.0,6380.063800000001
-PL solar PV ground new,PL electricity,PL,solar PV ground,solar PV ground,,solar PV ground,0.0,True,0.0,inf,1.0,1.0,0.0,0.0,0.0,54000.0,3300000.0,189511.97442912165,243511.97442912165,0.0,,2023,25.0,1562.7621006395088
+PL solar PV ground new,PL electricity,PL,solar PV ground,solar PV ground,,solar PV ground,0.0,True,0.0,inf,1.0,1.0,0.0,0.0,0.0,54000.0,3300000.0,189511.97442912165,243511.97442912165,0.0,,2023,25.0,1495.9135643719444
 PL solar PV roof 2023,PL electricity,PL,solar PV roof,solar PV roof,prosumer,solar PV roof,10670.0,False,10670.0,10670.0,1.0,1.0,0.0,0.0,0.0,67000.0,0.0,0.0,67000.0,0.0,,2023,1.0,10670.0
 PL wind offshore new,PL electricity,PL,wind offshore,wind offshore,,wind offshore,0.0,True,0.0,inf,1.0,1.0,30.0,0.0,30.0,300000.0,20000000.0,1020385.186405051,1320385.186405051,0.0,,2023,30.0,0.0
 PL wind onshore 2023,PL electricity,PL,wind onshore,wind onshore,,wind onshore,3050.0305000000003,True,3050.0,3050.0,1.0,1.0,13.0,0.0,13.0,98000.0,0.0,0.0,98000.0,0.0,,2023,1.0,3050.0305000000003
-PL wind onshore new,PL electricity,PL,wind onshore,wind onshore,,wind onshore,0.0,True,0.0,inf,1.0,1.0,13.0,0.0,13.0,98000.0,7100000.0,407737.88437780715,505737.88437780715,0.0,,2023,25.0,8655.63139915037
+PL wind onshore new,PL electricity,PL,wind onshore,wind onshore,,wind onshore,0.0,True,0.0,inf,1.0,1.0,13.0,0.0,13.0,98000.0,7100000.0,407737.88437780715,505737.88437780715,0.0,,2023,25.0,8847.697297518513
 PL wind onshore old 2023,PL electricity,PL,wind onshore,wind onshore old,,wind onshore,6380.0,False,6380.0,6380.0,1.0,1.0,17.0,0.0,17.0,160000.0,0.0,0.0,160000.0,0.0,,2023,1.0,6380.0

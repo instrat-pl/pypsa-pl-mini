@@ -3,7 +3,7 @@ electricity final use,electricity final use,electricity final use,,electricity,,
 hard coal supply,hard coal supply,hard coal supply,,,hard coal,,Generator,#b5c6cf,10
 hard coal power old,hard coal power,hard coal power,,hard coal,electricity,,Link,#b5c6cf,11
 hard coal power SC,hard coal power,hard coal power,,hard coal,electricity,,Link,#b5c6cf,12
-hard coal CHP,hard coal CHP,hard coal power,,hard coal,electricity,,Link,#b5c6cf,13
+hard coal CHP,hard coal CHP,hard coal CHP,,hard coal,electricity,,Link,#b5c6cf,13
 lignite supply,lignite supply,lignite supply,,,lignite,,Generator,#72a0b7,20
 lignite power old,lignite power,lignite power,,lignite,electricity,,Link,#72a0b7,21
 lignite power SC,lignite power,lignite power,,lignite,electricity,,Link,#72a0b7,22
