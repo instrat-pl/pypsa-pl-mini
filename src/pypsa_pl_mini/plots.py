@@ -1,7 +1,9 @@
 from cycler import cycler
+import pandas as pd
 import matplotlib as mpl
 from matplotlib import pyplot as plt
-import numpy as np
+
+from pypsa_pl_mini.config import data_dir
 
 
 default_size = 10
@@ -90,19 +92,27 @@ def calculate_luminance(rgb):
     return rgb[0] * 0.299 + rgb[1] * 0.587 + rgb[2] * 0.114
 
 
-def get_order_and_colors(network, agg="carrier"):
+def get_order_and_colors(network=None, run_name=None, agg="carrier"):
+
+    if network is not None:
+        df = network.carriers
+    elif run_name is not None:
+        df = pd.read_csv(
+            data_dir("runs", run_name, "input_network", "carriers.csv"), index_col=0
+        )
+
     if agg == "carrier":
-        order = network.carriers.sort_values("order").index
-        colors = network.carriers["color"].to_dict()
+        order = df.sort_values("order").index
+        colors = df["color"].to_dict()
     elif agg == "aggregation":
-        aggregation = (
-            network.carriers[["aggregation", "order", "color"]]
+        df = (
+            df[["aggregation", "order", "color"]]
             .sort_values("order")
             .groupby("aggregation")
             .first()
         )
-        order = aggregation.sort_values("order").index
-        colors = aggregation["color"].to_dict()
+        order = df.sort_values("order").index
+        colors = df["color"].to_dict()
     return order, colors
 
 

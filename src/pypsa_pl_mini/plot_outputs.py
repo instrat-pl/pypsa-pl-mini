@@ -32,27 +32,37 @@ def get_label_threshold(ylim, figsize, default=0):
 
 
 def plot_installed_capacities(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     bus_carrier="electricity",
     capacity_type="generation",
+    x_var="year",
+    cat_var="carrier",
     ylim=None,
     figsize=(5, 8),
 ):
 
-    if capacity_type == "generation":
-        # Output capacity, e.g. electrical capacity of a power plant
-        df = calculate_output_capacities(network, bus_carrier=bus_carrier)
-    elif capacity_type == "consumption":
-        # Input capacity, e.g. electrical capacity of an electrolyser
-        df = calculate_input_capacities(network, bus_carrier=bus_carrier)
+    if network is not None:
 
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
-    df["value"] = (df["value"] / 1e3).round(2)
+        if capacity_type == "generation":
+            # Output capacity, e.g. electrical capacity of a power plant
+            df = calculate_output_capacities(network, bus_carrier=bus_carrier)
+        elif capacity_type == "consumption":
+            # Input capacity, e.g. electrical capacity of an electrolyser
+            df = calculate_input_capacities(network, bus_carrier=bus_carrier)
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = (df["value"] / 1e3).round(2)
+
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title=f"Installed {bus_carrier} {capacity_type} capacity [GW]",
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 3.5),
@@ -68,26 +78,36 @@ def plot_installed_capacities(
 
 
 def plot_capacity_additions(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     bus_carrier="electricity",
     capacity_type="generation",
+    x_var="year",
+    cat_var="carrier",
     ylim=None,
     figsize=(5, 6),
 ):
 
-    if capacity_type == "generation":
-        # Output capacity, e.g. electrical capacity of a power plant
-        df = calculate_output_capacity_additions(network, bus_carrier=bus_carrier)
-    elif capacity_type == "consumption":
-        # Input capacity, e.g. electrical capacity of an electrolyser
-        df = calculate_input_capacity_additions(network, bus_carrier=bus_carrier)
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
-    df["value"] = (df["value"] / 1e3).round(2)
+    if network is not None:
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+        if capacity_type == "generation":
+            # Output capacity, e.g. electrical capacity of a power plant
+            df = calculate_output_capacity_additions(network, bus_carrier=bus_carrier)
+        elif capacity_type == "consumption":
+            # Input capacity, e.g. electrical capacity of an electrolyser
+            df = calculate_input_capacity_additions(network, bus_carrier=bus_carrier)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = (df["value"] / 1e3).round(2)
+
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title=f"{bus_carrier.capitalize()} {capacity_type} capacity additions [GW]",
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 1),
@@ -108,22 +128,30 @@ def plot_capacity_additions(
 
 
 def plot_storage_capacities(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     title_carrier="electricity",
     bus_carriers=["battery large electricity", "hydro PSH electricity"],
+    x_var="year",
+    cat_var="carrier",
     ylim=None,
     figsize=(5, 6),
 ):
+    if network is not None:
 
-    df = calculate_storage_capacities(network, bus_carriers=bus_carriers)
+        df = calculate_storage_capacities(network, bus_carriers=bus_carriers)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = (df["value"] / 1e3).round(2)
 
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
-    df["value"] = (df["value"] / 1e3).round(2)
-
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title=f"Installed {title_carrier} storage capacity [GWh]",
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 0.5),
@@ -139,22 +167,30 @@ def plot_storage_capacities(
 
 
 def plot_storage_capacity_additions(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     title_carrier="electricity",
     bus_carriers=["battery large electricity", "hydro PSH electricity"],
+    x_var="year",
+    cat_var="carrier",
     ylim=None,
     figsize=(5, 4),
 ):
+    if network is not None:
 
-    df = calculate_storage_capacity_additions(network, bus_carriers=bus_carriers)
+        df = calculate_storage_capacity_additions(network, bus_carriers=bus_carriers)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = (df["value"] / 1e3).round(2)
 
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
-    df["value"] = (df["value"] / 1e3).round(2)
-
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title=f"{title_carrier.capitalize()} storage capacity additions [GWh]",
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 1.5),
@@ -175,19 +211,30 @@ def plot_storage_capacity_additions(
 
 
 def plot_annual_generation(
-    network, bus_carrier="electricity", agg="carrier", ylim=None, figsize=(5, 8)
+    network=None,
+    df=None,
+    run_name=None,
+    bus_carrier="electricity",
+    x_var="year",
+    cat_var="carrier",
+    ylim=None,
+    figsize=(5, 8),
 ):
-    df = calculate_flows(network, bus_carrier=bus_carrier)
-    df = df.groupby(["year", agg]).agg({"value": "sum"}).reset_index()
-    df["value"] = df["value"].round(2)
+    if network is not None:
 
-    df = df[~df[agg].str.contains("final use")]
+        df = calculate_flows(network, bus_carrier=bus_carrier)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = df["value"].round(2)
+        df = df[~df[cat_var].str.contains("final use")]
 
-    carrier_order, carrier_colors = get_order_and_colors(network, agg=agg)
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title=f"{bus_carrier.capitalize()} generation [TWh]",
-        cat_var=agg,
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 5),
@@ -208,20 +255,31 @@ def plot_annual_generation(
     return fig, df
 
 
-def plot_curtailed_vres_energy(network, ylim=None, figsize=(5, 4)):
-
-    df = calculate_curtailed_vres_energy(network)
-
-    df = df.groupby(["year", "carrier"]).agg({"value": "sum"}).reset_index()
-    df["value"] = (df["value"] / 1e6).round(2)
+def plot_curtailed_vres_energy(
+    network=None,
+    df=None,
+    run_name=None,
+    x_var="year",
+    cat_var="carrier",
+    ylim=None,
+    figsize=(5, 4),
+):
+    if network is not None:
+        df = calculate_curtailed_vres_energy(network)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        df["value"] = (df["value"] / 1e6).round(2)
 
     if df.empty:
         return plt.figure(), df
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
     fig = plot_bar(
         df,
         title="Curtailed vRES energy [TWh]",
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 0.5),
@@ -250,11 +308,16 @@ def get_fuel_consumption(network):
     return df
 
 
-def plot_fuel_consumption(network, ylim=None, figsize=(5, 6)):
-    df = get_fuel_consumption(network)
-    df["value"] = (df["value"] * 3.6).round(1)
+def plot_fuel_consumption(
+    network=None, df=None, run_name=None, ylim=None, figsize=(5, 6)
+):
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    if network is not None:
+
+        df = get_fuel_consumption(network)
+        df["value"] = (df["value"] * 3.6).round(1)
+
+    carrier_order, carrier_colors = get_order_and_colors(network, run_name=run_name)
     fig = plot_bar(
         df,
         title="Fuel consumption [PJ]",
@@ -273,21 +336,27 @@ def plot_fuel_consumption(network, ylim=None, figsize=(5, 6)):
     return fig, df
 
 
-def plot_co2_emissions(network, ylim=None, figsize=(5, 6)):
-    df = get_fuel_consumption(network)
-    df = df.merge(
-        network.carriers["co2_emissions"].dropna(),
-        how="inner",
-        left_on="carrier",
-        right_index=True,
-    )
-    df["value"] = (df["value"] * df["co2_emissions"]).round(2)
-    df = df.drop(columns="co2_emissions")
+def plot_co2_emissions(
+    network=None, df=None, run_name=None, x_var="year", ylim=None, figsize=(5, 6)
+):
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    if network is not None:
+
+        df = get_fuel_consumption(network)
+        df = df.merge(
+            network.carriers["co2_emissions"].dropna(),
+            how="inner",
+            left_on="carrier",
+            right_index=True,
+        )
+        df["value"] = (df["value"] * df["co2_emissions"]).round(2)
+        df = df.drop(columns="co2_emissions")
+
+    carrier_order, carrier_colors = get_order_and_colors(network, run_name=run_name)
     fig = plot_bar(
         df,
         title="CO₂ emissions [Mt]",
+        x_var=x_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 5),
@@ -303,7 +372,14 @@ def plot_co2_emissions(network, ylim=None, figsize=(5, 6)):
 
 
 def plot_opex(
-    network, cost_attr="marginal_cost", agg="aggregation", ylim=None, figsize=(5, 8)
+    network=None,
+    df=None,
+    run_name=None,
+    cost_attr="marginal_cost",
+    x_var="year",
+    cat_var="aggregation",
+    ylim=None,
+    figsize=(5, 8),
 ):
     title = {
         "marginal_cost": "Total variable costs [bln PLN]",
@@ -311,20 +387,20 @@ def plot_opex(
         "co2_cost": "CO₂ costs [bln PLN]",
     }
 
-    df = calculate_opex(network, cost_attr=cost_attr)
+    if network is not None:
 
-    df = df.groupby(["year", agg]).agg({"value": "sum"}).reset_index()
+        df = calculate_opex(network, cost_attr=cost_attr)
+        df = df.groupby(["year", cat_var]).agg({"value": "sum"}).reset_index()
+        # Convert to bln PLN
+        df["value"] = (df["value"] / 1e9).round(2)
+        df = df[df["value"].abs() > 0]
 
-    # Convert to bln PLN
-    df["value"] = (df["value"] / 1e9).round(2)
-
-    df = df[df["value"].abs() > 0]
-
-    order, colors = get_order_and_colors(network, agg=agg)
+    order, colors = get_order_and_colors(network, agg=cat_var, run_name=run_name)
     fig = plot_bar(
         df,
         title=title[cost_attr],
-        cat_var=agg,
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=order,
         cat_colors=colors,
         label_threshold=get_label_threshold(ylim, figsize, 1),
@@ -345,7 +421,14 @@ def plot_opex(
 
 
 def plot_capex(
-    network, cost_attr="capital_cost", agg="aggregation", ylim=None, figsize=(5, 6)
+    network=None,
+    df=None,
+    run_name=None,
+    cost_attr="capital_cost",
+    x_var="year",
+    cat_var="aggregation",
+    ylim=None,
+    figsize=(5, 6),
 ):
     title = {
         "capital_cost": "Total capital costs [bln PLN]",
@@ -354,21 +437,23 @@ def plot_capex(
         "investment_cost": "Overnight investment costs [bln PLN]",
     }
 
-    df = calculate_capex(network, cost_attr=cost_attr)
-    df = df.groupby(["year", agg]).agg({"value": "sum"}).reset_index()
+    if network is not None:
 
-    # Convert to bln PLN
-    df["value"] = (df["value"] / 1e9).round(2)
+        df = calculate_capex(network, cost_attr=cost_attr)
+        df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
+        # Convert to bln PLN
+        df["value"] = (df["value"] / 1e9).round(2)
+        df = df[df["value"].abs() > 0]
 
-    df = df[df["value"].abs() > 0]
     if df.empty:
         return plt.figure(), df
 
-    order, colors = get_order_and_colors(network, agg=agg)
+    order, colors = get_order_and_colors(network, agg=cat_var, run_name=run_name)
     fig = plot_bar(
         df,
         title=title[cost_attr],
-        cat_var=agg,
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=order,
         cat_colors=colors,
         label_threshold=get_label_threshold(ylim, figsize, 2),
@@ -388,9 +473,14 @@ def plot_capex(
     return fig, df
 
 
-def plot_detailed_costs(network, agg="aggregation", ylim=None, figsize=(8, 6)):
-
-    dfs = []
+def plot_detailed_costs(
+    network=None,
+    df=None,
+    run_name=None,
+    cat_var="aggregation",
+    ylim=None,
+    figsize=(8, 6),
+):
 
     costs = [
         ("variable_cost", "Var. O&M", calculate_opex),
@@ -399,30 +489,31 @@ def plot_detailed_costs(network, agg="aggregation", ylim=None, figsize=(8, 6)):
         ("annual_investment_cost", "Ann. invest.", calculate_capex),
     ]
 
-    for cost_attr, label, calculate_cost in costs:
-        df = calculate_cost(network, cost_attr=cost_attr)
-        df = df.groupby(["year", agg]).agg({"value": "sum"}).reset_index()
-        df["cost component"] = label
-        dfs.append(df)
-    df = pd.concat(dfs)
+    if network is not None:
+
+        dfs = []
+        for cost_attr, label, calculate_cost in costs:
+            df = calculate_cost(network, cost_attr=cost_attr)
+            df = df.groupby(["year", cat_var]).agg({"value": "sum"}).reset_index()
+            df["cost component"] = label
+            dfs.append(df)
+        df = pd.concat(dfs)
+
+        df = df[df["year"] == network.meta["year"]].drop(columns="year")
+        # Convert to bln PLN
+        df["value"] = (df["value"] / 1e9).round(2)
+        df = df[df["value"].abs() > 0]
 
     df["cost component"] = pd.Categorical(
         df["cost component"], categories=[label for _, label, _ in costs], ordered=True
     )
 
-    df = df[df["year"] == network.meta["year"]].drop(columns="year")
-
-    # Convert to bln PLN
-    df["value"] = (df["value"] / 1e9).round(2)
-
-    df = df[df["value"].abs() > 0]
-
-    order, colors = get_order_and_colors(network, agg=agg)
+    order, colors = get_order_and_colors(network, agg=cat_var, run_name=run_name)
     fig = plot_bar(
         df,
         x_var="cost component",
         title="Annual cost components [bln PLN]",
-        cat_var=agg,
+        cat_var=cat_var,
         cat_order=order,
         cat_colors=colors,
         label_threshold=get_label_threshold(ylim, figsize, 1),
@@ -442,56 +533,55 @@ def plot_detailed_costs(network, agg="aggregation", ylim=None, figsize=(8, 6)):
     return fig, df
 
 
-def plot_average_unit_cost_and_price(network, ylim=None, figsize=(5, 4)):
-
+def plot_average_unit_cost_and_price(
+    network=None, df=None, run_name=None, ylim=None, figsize=(5, 4)
+):
     # TODO: generalise for a case with separate final use carriers
-
-    df = calculate_statistics(network)
-    df = df[
-        [
-            "year",
-            "carrier",
-            "Withdrawal",
-            "Revenue",
-            "Operational Expenditure",
-            "Capital Expenditure",
-        ]
-    ]
-    df["Total Cost"] = df["Operational Expenditure"] + df["Capital Expenditure"]
-
-    df_cost = (
-        df.groupby(["year"])
-        .agg(**{"Avg. unit cost": ("Total Cost", "sum")})
-        .reset_index()
-    )
-    is_final_use = df["carrier"].str.contains("final use")
-    df_price_use = (
-        df[is_final_use]
-        .groupby(["year"])
-        .agg(
-            **{
-                "Avg. price": ("Revenue", lambda x: -np.sum(x)),
-                "Final use": ("Withdrawal", "sum"),
-            }
-        )
-        .reset_index()
-    )
-
-    df = pd.merge(df_cost, df_price_use, on="year")
 
     metrics = ["Avg. unit cost", "Avg. price"]
 
-    for col in metrics:
-        df[col] = (df[col] / df["Final use"]).round(1)
+    if network is not None:
 
-    df = df.melt(
-        id_vars="year", value_vars=metrics, var_name="metric", value_name="value"
-    )
+        df = calculate_statistics(network)
+        df = df[
+            [
+                "year",
+                "carrier",
+                "Withdrawal",
+                "Revenue",
+                "Operational Expenditure",
+                "Capital Expenditure",
+            ]
+        ]
+        df["Total Cost"] = df["Operational Expenditure"] + df["Capital Expenditure"]
+
+        df_cost = (
+            df.groupby(["year"])
+            .agg(**{"Avg. unit cost": ("Total Cost", "sum")})
+            .reset_index()
+        )
+        is_final_use = df["carrier"].str.contains("final use")
+        df_price_use = (
+            df[is_final_use]
+            .groupby(["year"])
+            .agg(
+                **{
+                    "Avg. price": ("Revenue", lambda x: -np.sum(x)),
+                    "Final use": ("Withdrawal", "sum"),
+                }
+            )
+            .reset_index()
+        )
+
+        df = pd.merge(df_cost, df_price_use, on="year")
+        for col in metrics:
+            df[col] = (df[col] / df["Final use"]).round(1)
+        df = df.melt(
+            id_vars="year", value_vars=metrics, var_name="metric", value_name="value"
+        )
+        df = df[df["year"] == network.meta["year"]].drop(columns="year")
 
     df["metric"] = pd.Categorical(df["metric"], categories=metrics, ordered=True)
-
-    df = df[df["year"] == network.meta["year"]].drop(columns="year")
-
     df["metric2"] = df["metric"]
 
     fig = plot_bar(
@@ -518,29 +608,38 @@ def plot_average_unit_cost_and_price(network, ylim=None, figsize=(5, 4)):
 
 
 def plot_total_costs(
-    network, costs=["OPEX", "CAPEX"], agg="aggregation", ylim=None, figsize=(5, 8)
+    network=None,
+    df=None,
+    run_name=None,
+    costs=["OPEX", "CAPEX"],
+    x_var="year",
+    cat_var="aggregation",
+    ylim=None,
+    figsize=(5, 8),
 ):
-    df = calculate_statistics(network)
-    df = df[["year", agg, "Operational Expenditure", "Capital Expenditure"]]
-    df["Total costs"] = 0
-    if "OPEX" in costs:
-        df["Total costs"] += df["Operational Expenditure"]
-    if "CAPEX" in costs:
-        df["Total costs"] += df["Capital Expenditure"]
 
-    df = df.groupby(["year", agg]).agg(value=("Total costs", "sum")).reset_index()
+    if network is not None:
+        df = calculate_statistics(network)
+        df = df[[x_var, cat_var, "Operational Expenditure", "Capital Expenditure"]]
+        df["Total costs"] = 0
+        if "OPEX" in costs:
+            df["Total costs"] += df["Operational Expenditure"]
+        if "CAPEX" in costs:
+            df["Total costs"] += df["Capital Expenditure"]
+        df = (
+            df.groupby([x_var, cat_var]).agg(value=("Total costs", "sum")).reset_index()
+        )
+        # Convert to bln PLN
+        df["value"] = (df["value"] / 1e9).round(2)
+        df = df[df["value"].abs() > 0]
+        # df = df[df["carrier"] != "electricity final use"]
 
-    # Convert to bln PLN
-    df["value"] = (df["value"] / 1e9).round(2)
-
-    df = df[df["value"].abs() > 0]
-    # df = df[df["carrier"] != "electricity final use"]
-
-    order, colors = get_order_and_colors(network, agg=agg)
+    order, colors = get_order_and_colors(network, agg=cat_var, run_name=run_name)
     fig = plot_bar(
         df,
         title="Total annual costs [bln PLN]",
-        cat_var=agg,
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=order,
         cat_colors=colors,
         label_threshold=get_label_threshold(ylim, figsize, 2),
@@ -560,30 +659,47 @@ def plot_total_costs(
     return fig, df
 
 
-def plot_net_revenues(network, costs=["OPEX", "CAPEX"], agg="aggregation", ylim=None, figsize=(5, 8)):
-    df = calculate_statistics(network)
-    df = df[
-        ["year", agg, "Revenue", "Operational Expenditure", "Capital Expenditure"]
-    ]
-    df["Net revenue"] = df["Revenue"]
-    if "OPEX" in costs:
-        df["Net revenue"] -= df["Operational Expenditure"]
-    if "CAPEX" in costs:
-        df["Net revenue"] -= df["Capital Expenditure"]
+def plot_net_revenues(
+    network=None,
+    df=None,
+    run_name=None,
+    costs=["OPEX", "CAPEX"],
+    x_var="year",
+    cat_var="aggregation",
+    ylim=None,
+    figsize=(5, 8),
+):
 
-    df = df.groupby(["year", agg]).agg(value=("Net revenue", "sum")).reset_index()
+    if network is not None:
+        df = calculate_statistics(network)
+        df = df[
+            [
+                x_var,
+                cat_var,
+                "Revenue",
+                "Operational Expenditure",
+                "Capital Expenditure",
+            ]
+        ]
+        df["Net revenue"] = df["Revenue"]
+        if "OPEX" in costs:
+            df["Net revenue"] -= df["Operational Expenditure"]
+        if "CAPEX" in costs:
+            df["Net revenue"] -= df["Capital Expenditure"]
+        df = (
+            df.groupby([x_var, cat_var]).agg(value=("Net revenue", "sum")).reset_index()
+        )
+        # Convert to bln PLN
+        df["value"] = (df["value"] / 1e9).round(2)
+        df = df[df["value"].abs() > 0]
+        df = df[df[cat_var] != "electricity final use"]
 
-    # Convert to bln PLN
-    df["value"] = (df["value"] / 1e9).round(2)
-
-    df = df[df["value"].abs() > 0]
-    df = df[df[agg] != "electricity final use"]
-
-    order, colors = get_order_and_colors(network, agg=agg)
+    order, colors = get_order_and_colors(network, agg=cat_var)
     fig = plot_bar(
         df,
         title="Net revenue [bln PLN]",
-        cat_var=agg,
+        x_var=x_var,
+        cat_var=cat_var,
         cat_order=order,
         cat_colors=colors,
         label_threshold=get_label_threshold(ylim, figsize, 1),
@@ -607,25 +723,32 @@ def plot_net_revenues(network, costs=["OPEX", "CAPEX"], agg="aggregation", ylim=
 
 
 def plot_hourly_generation(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     bus_carrier="electricity",
     subperiods=None,
+    cat_var="carrier",
     ylim=None,
     figsize=(8, 5),
 ):
-    df = calculate_flows(network, bus_carrier, annual=False)
-    df = df.groupby(level=["carrier"]).sum()
-    df = (df / 1e3).round(3)
-    df = df.transpose()
 
-    df = df.drop(columns=[col for col in df.columns if "final use" in col])
+    if network is not None:
+
+        df = calculate_flows(network, bus_carrier, annual=False)
+        df = df.groupby(level=[cat_var]).sum()
+        df = (df / 1e3).round(3)
+        df = df.transpose()
+        df = df.drop(columns=[col for col in df.columns if "final use" in col])
 
     df.index = pd.to_datetime(df.index)
 
     if subperiods is None:
         subperiods = [("", (0, len(df)))]
 
-    carrier_order, carrier_colors = get_order_and_colors(network)
+    carrier_order, carrier_colors = get_order_and_colors(
+        network, agg=cat_var, run_name=run_name
+    )
 
     for subperiod, (i_start, i_stop) in subperiods:
         subdf = df.iloc[i_start:i_stop, :]
@@ -634,6 +757,7 @@ def plot_hourly_generation(
             subdf,
             is_wide=True,
             title=f"{bus_carrier.capitalize()} generation{' – ' if subperiod != '' else ''}{subperiod} [GW]",
+            cat_var=cat_var,
             cat_order=carrier_order,
             cat_colors=carrier_colors,
             ylim=ylim,
@@ -661,13 +785,18 @@ def plot_hourly_generation(
 
 
 def plot_prices(
-    network,
+    network=None,
+    df=None,
+    run_name=None,
     bus_carrier="electricity",
     subperiods=None,
     ylim=None,
     figsize=(8, 3),
 ):
-    df = calculate_marginal_prices(network, bus_carriers=[bus_carrier]).transpose()
+
+    if network is not None:
+        df = calculate_marginal_prices(network, bus_carriers=[bus_carrier]).transpose()
+
     df.index = pd.to_datetime(df.index)
 
     if subperiods is None:
