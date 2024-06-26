@@ -141,12 +141,14 @@ def plot_storage_capacities(
     if network is not None:
 
         df = calculate_storage_capacities(network, bus_carriers=bus_carriers)
+
         df = df.groupby([x_var, cat_var]).agg({"value": "sum"}).reset_index()
         df["value"] = (df["value"] / 1e3).round(2)
 
     carrier_order, carrier_colors = get_order_and_colors(
         network, agg=cat_var, run_name=run_name
     )
+
     fig = plot_bar(
         df,
         title=f"Installed {title_carrier} storage capacity [GWh]",
@@ -309,7 +311,7 @@ def get_fuel_consumption(network):
 
 
 def plot_fuel_consumption(
-    network=None, df=None, run_name=None, ylim=None, figsize=(5, 6)
+    network=None, df=None, run_name=None, x_var="year", cat_var="carrier", ylim=None, figsize=(5, 6)
 ):
 
     if network is not None:
@@ -321,6 +323,7 @@ def plot_fuel_consumption(
     fig = plot_bar(
         df,
         title="Fuel consumption [PJ]",
+        x_var=x_var,
         cat_order=carrier_order,
         cat_colors=carrier_colors,
         label_threshold=get_label_threshold(ylim, figsize, 30),
@@ -337,7 +340,7 @@ def plot_fuel_consumption(
 
 
 def plot_co2_emissions(
-    network=None, df=None, run_name=None, x_var="year", ylim=None, figsize=(5, 6)
+    network=None, df=None, run_name=None, x_var="year", cat_var="carrier", ylim=None, figsize=(5, 6)
 ):
 
     if network is not None:

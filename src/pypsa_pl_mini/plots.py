@@ -170,7 +170,7 @@ def add_bar_labels(
             container,
             fmt=format_label(label_digits, label_commas, label_threshold),
             label_type="center",
-            fontsize=default_size,
+            fontsize=default_size-1,
         )
         for label, color in zip(labels, colors):
             label.set(
