@@ -10,7 +10,7 @@ def make_electricity_final_use_load_profile(df, snapshots, params):
         data_dir(
             "input",
             "timeseries",
-            f"electricity_demand_profile;year={params['weather_year']}.csv",
+            f"demand_profile;carrier=electricity final use;year={params['weather_year']}.csv",
         )
     )
     # Create dataframe with profiles for each final use component based on area match
@@ -33,7 +33,7 @@ def make_heat_final_use_load_profile(df, snapshots, params):
         data_dir(
             "input",
             "timeseries",
-            f"space_heating_demand_profile;year={params['weather_year']}.csv",
+            f"demand_profile;carrier=space heating final use;year={params['weather_year']}.csv",
         )
     )
     df_t = df_t.set_index("hour").loc[snapshots]

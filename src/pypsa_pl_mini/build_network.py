@@ -191,7 +191,7 @@ def add_snapshots(network, params):
         data_dir(
             "input",
             "timeseries",
-            f"electricity_demand_profile;year={params['weather_year']}.csv",
+            f"demand_profile;carrier=electricity final use;year={params['weather_year']}.csv",
         ),
         usecols=["hour"],
     )

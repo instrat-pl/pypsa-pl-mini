@@ -49,11 +49,11 @@ def download_input_data():
             "historical",
             "https://docs.google.com/spreadsheets/d/1OTZmzscUlB6uxuaWvN5Et1qpixFMubnh2m4-qbZD7rk",
         ),
-        # (
-        #     "capacity_addition_potentials",
-        #     "instrat_2024",
-        #     "https://docs.google.com/spreadsheets/d/13mkEhrIJyCPVeOW_toOVa1p8E8wNg6rgj5hBjQQBflw",
-        # ),
+        (
+            "capacity_addition_potentials",
+            "instrat_2024",
+            "https://docs.google.com/spreadsheets/d/13mkEhrIJyCPVeOW_toOVa1p8E8wNg6rgj5hBjQQBflw",
+        ),
     ]:
         df = gsheet_to_df(url, sheet_name=variant)
         df = ignore_commented_rows_columns(df)
