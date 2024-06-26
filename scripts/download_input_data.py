@@ -22,8 +22,7 @@ def ignore_commented_rows_columns(df):
     return df
 
 
-if __name__ == "__main__":
-
+def download_input_data():
     for name, variant, url in [
         (
             "technology_carrier_definitions",
@@ -59,3 +58,8 @@ if __name__ == "__main__":
         df = gsheet_to_df(url, sheet_name=variant)
         df = ignore_commented_rows_columns(df)
         df.to_csv(data_dir("input", f"{name};variant={variant}.csv"), index=False)
+
+
+if __name__ == "__main__":
+
+    download_input_data()
