@@ -26,34 +26,39 @@ def download_input_data():
     for name, variant, url in [
         (
             "technology_carrier_definitions",
-            "mini",
-            "https://docs.google.com/spreadsheets/d/1oM4T3LirR-XGO1fQ_KhiuQXW8t3I4AKj8q0n8P0s-aE",
+            # "mini",
+            "full",
+            # "https://docs.google.com/spreadsheets/d/1oM4T3LirR-XGO1fQ_KhiuQXW8t3I4AKj8q0n8P0s-aE",
+            "https://docs.google.com/spreadsheets/d/1T9hG-OTbvjW_jY8-6KpDxbJacLSlpXut2hz6Zere730",
         ),
         (
             "technology_cost_data",
             "instrat_2024",
-            "https://docs.google.com/spreadsheets/d/1P-CGOaUUJt3J-6DfelAx5ilRSy0r2gCyJp_ZeHu1wbI",
+            # "https://docs.google.com/spreadsheets/d/1P-CGOaUUJt3J-6DfelAx5ilRSy0r2gCyJp_ZeHu1wbI",
+            "https://docs.google.com/spreadsheets/d/1i6b6l16P2UoFfUz76Xhy2KFmD9z12ig2G964SrB4BB0/",
         ),
         (
             "installed_capacity",
             "historical_totals",
-            "https://docs.google.com/spreadsheets/d/1fwosQK76x_FoXRSI6tphexjMchXSIX0NqAfHNCDI_BA",
+            # "https://docs.google.com/spreadsheets/d/1fwosQK76x_FoXRSI6tphexjMchXSIX0NqAfHNCDI_BA",
+            "https://docs.google.com/spreadsheets/d/1VH-5UCdcGvhdNVmah9U_DF5ORgbNNPo_cj-VyJrZ2j8/"
         ),
         (
             "annual_energy_flows",
             "historical",
-            "https://docs.google.com/spreadsheets/d/1OWm53wIPTVJf0PGUrUxhjpzfVJgyMhwdBLg5cuRzvZY",
+            # "https://docs.google.com/spreadsheets/d/1OWm53wIPTVJf0PGUrUxhjpzfVJgyMhwdBLg5cuRzvZY",
+            "https://docs.google.com/spreadsheets/d/1YZPH8AKbSs9laL74DDEN8Hzmy7wb8yMBxumWbSyxeA4/",
         ),
         (
             "capacity_utilisation",
             "historical",
             "https://docs.google.com/spreadsheets/d/1OTZmzscUlB6uxuaWvN5Et1qpixFMubnh2m4-qbZD7rk",
         ),
-        (
-            "capacity_addition_potentials",
-            "instrat_2024",
-            "https://docs.google.com/spreadsheets/d/13mkEhrIJyCPVeOW_toOVa1p8E8wNg6rgj5hBjQQBflw",
-        ),
+        # (
+        #     "capacity_addition_potentials",
+        #     "instrat_2024",
+        #     "https://docs.google.com/spreadsheets/d/13mkEhrIJyCPVeOW_toOVa1p8E8wNg6rgj5hBjQQBflw",
+        # ),
     ]:
         df = gsheet_to_df(url, sheet_name=variant)
         df = ignore_commented_rows_columns(df)
